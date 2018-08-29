@@ -28,6 +28,7 @@ class CreateEmpresaTable extends Migration
             $table->string('email', 45)->nullable()->comment('Correo electronico de la empresa');
             $table->string('logo', 45)->nullable()->comment('Logotipo de la empresa');
             $table->string('web', 45)->nullable()->comment('Sitio web de la empresa');
+            $table->nullableTimestamps();
         });
     }
 

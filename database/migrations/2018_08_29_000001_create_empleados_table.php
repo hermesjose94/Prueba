@@ -28,7 +28,8 @@ class CreateEmpleadosTable extends Migration
             $table->string('apellido', 45);
             $table->unsignedInteger('empresa')->comment('Llave foranea con empresa');
             $table->string('email', 45)->nullable();
-            $table->integer('telefono')->nullable();
+            $table->string('telefono',50)->nullable();
+            $table->nullableTimestamps();
 
             $table->index(["empresa"], 'fk_empleados_empresa_idx');
 
